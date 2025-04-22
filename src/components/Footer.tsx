@@ -1,138 +1,116 @@
 
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Facebook, Instagram, Twitter, Youtube, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { 
-  Mail, Phone, MapPin, 
-  Facebook, Instagram, Youtube, Twitter 
-} from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-200 pt-16 pb-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div>
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <span className="text-primary text-3xl font-chinese">汉语</span>
-              <span className="font-semibold text-xl text-white">ЧжунВэнь</span>
+    <footer className="bg-gray-900 text-gray-300">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="md:col-span-1">
+            <Link to="/" className="flex items-center gap-2 text-white mb-6">
+              <span className="text-chinese-red text-3xl font-chinese">汉语</span>
+              <span className="font-semibold text-xl">ЧжунВэнь</span>
             </Link>
             <p className="mb-6 text-gray-400">
-              Онлайн-школа китайского языка с носителями языка и современной методикой обучения
+              Откройте для себя мир китайского языка и культуры с нашей школой онлайн-курсов.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Facebook className="w-5 h-5" />
+              <a href="#" className="hover:text-primary transition-colors" aria-label="Facebook">
+                <Facebook size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Instagram className="w-5 h-5" />
+              <a href="#" className="hover:text-primary transition-colors" aria-label="Instagram">
+                <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Youtube className="w-5 h-5" />
+              <a href="#" className="hover:text-primary transition-colors" aria-label="Twitter">
+                <Twitter size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a href="#" className="hover:text-primary transition-colors" aria-label="Youtube">
+                <Youtube size={20} />
               </a>
             </div>
           </div>
           
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-white">Курсы</h3>
+            <h3 className="font-bold text-white text-lg mb-6">Курсы</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/courses" className="text-gray-400 hover:text-primary transition-colors">
-                  Все курсы
-                </Link>
+                <a href="#" className="hover:text-primary transition-colors hover-link">Для начинающих</a>
               </li>
               <li>
-                <Link to="/courses/beginner" className="text-gray-400 hover:text-primary transition-colors">
-                  Для начинающих
-                </Link>
+                <a href="#" className="hover:text-primary transition-colors hover-link">Разговорный китайский</a>
               </li>
               <li>
-                <Link to="/courses/intermediate" className="text-gray-400 hover:text-primary transition-colors">
-                  Средний уровень
-                </Link>
+                <a href="#" className="hover:text-primary transition-colors hover-link">Деловой китайский</a>
               </li>
               <li>
-                <Link to="/courses/advanced" className="text-gray-400 hover:text-primary transition-colors">
-                  Продвинутый уровень
-                </Link>
+                <a href="#" className="hover:text-primary transition-colors hover-link">Подготовка к HSK</a>
               </li>
               <li>
-                <Link to="/courses/business" className="text-gray-400 hover:text-primary transition-colors">
-                  Деловой китайский
-                </Link>
+                <a href="#" className="hover:text-primary transition-colors hover-link">Китайская культура</a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-white">Информация</h3>
+            <h3 className="font-bold text-white text-lg mb-6">Информация</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/about" className="text-gray-400 hover:text-primary transition-colors">
-                  О нас
-                </Link>
+                <a href="#" className="hover:text-primary transition-colors hover-link">О нас</a>
               </li>
               <li>
-                <Link to="/teachers" className="text-gray-400 hover:text-primary transition-colors">
-                  Преподаватели
-                </Link>
+                <a href="#" className="hover:text-primary transition-colors hover-link">Преподаватели</a>
               </li>
               <li>
-                <Link to="/faq" className="text-gray-400 hover:text-primary transition-colors">
-                  Частые вопросы
-                </Link>
+                <a href="#" className="hover:text-primary transition-colors hover-link">Отзывы</a>
               </li>
               <li>
-                <Link to="/blog" className="text-gray-400 hover:text-primary transition-colors">
-                  Блог
-                </Link>
+                <a href="#" className="hover:text-primary transition-colors hover-link">Блог</a>
               </li>
               <li>
-                <Link to="/contacts" className="text-gray-400 hover:text-primary transition-colors">
-                  Контакты
-                </Link>
+                <a href="#" className="hover:text-primary transition-colors hover-link">Контакты</a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-white">Связаться с нами</h3>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-gray-400">
-                <Phone className="w-5 h-5 text-primary" />
-                <span>+7 (900) 123-45-67</span>
-              </li>
-              <li className="flex items-center gap-3 text-gray-400">
-                <Mail className="w-5 h-5 text-primary" />
-                <span>info@zhongwen.ru</span>
-              </li>
-              <li className="flex items-start gap-3 text-gray-400">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                <span>г. Москва, ул. Пушкина, д. 10, офис 25</span>
-              </li>
-            </ul>
-            
-            <div className="mt-6">
-              <h4 className="font-medium mb-2 text-white">Подпишитесь на новости</h4>
-              <div className="flex">
-                <Input 
-                  type="email" 
-                  placeholder="Email" 
-                  className="bg-gray-800 border-gray-700 text-white"
-                />
-                <Button type="submit" className="ml-2">
-                  OK
-                </Button>
-              </div>
+            <h3 className="font-bold text-white text-lg mb-6">Подпишитесь на новости</h3>
+            <p className="mb-4 text-gray-400">
+              Получайте анонсы новых курсов, материалы для самостоятельного изучения и специальные предложения.
+            </p>
+            <div className="flex">
+              <Input 
+                type="email" 
+                placeholder="Ваш email" 
+                className="rounded-r-none bg-gray-800 border-gray-700 focus:border-primary"
+              />
+              <Button className="rounded-l-none">
+                <Send size={16} className="mr-1" />
+                Подписаться
+              </Button>
             </div>
           </div>
         </div>
         
-        <div className="border-t border-gray-800 pt-8 mt-8 text-center text-gray-500 text-sm">
-          <p>© 2023 ЧжунВэнь. Все права защищены.</p>
+        <hr className="border-gray-800 my-8" />
+        
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-500 text-sm mb-4 md:mb-0">
+            © 2023 ЧжунВэнь. Все права защищены.
+          </p>
+          <div className="flex space-x-6 text-sm">
+            <a href="#" className="text-gray-500 hover:text-primary transition-colors">
+              Политика конфиденциальности
+            </a>
+            <a href="#" className="text-gray-500 hover:text-primary transition-colors">
+              Условия использования
+            </a>
+            <a href="#" className="text-gray-500 hover:text-primary transition-colors">
+              Правила оплаты
+            </a>
+          </div>
         </div>
       </div>
     </footer>
