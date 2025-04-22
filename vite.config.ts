@@ -19,7 +19,10 @@ export default defineConfig({
     port: 5173,
     allowedHosts: true,
     hmr: {
-      overlay: false // Disables the error overlay if you only want console errors
+      host: 'localhost',
+      clientPort: 443, // Важно для HTTPS клиентов
+      protocol: 'wss', // Использование защищенного WebSocket
+      overlay: false // Отключение оверлея ошибок
     }
   },
 });
